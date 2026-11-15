@@ -23,6 +23,8 @@ var map: Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 	map = load_map(preload("res://levels/bottom.tscn"))
 	map.name = "current_map"
 	add_child(map)
