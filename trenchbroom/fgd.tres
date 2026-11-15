@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" format=3 uid="uid://ottq16j0bl8y"]
+
+[ext_resource type="Script" uid="uid://drlmgulwbjwqu" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_4f5ef"]
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_od0i7"]
+[ext_resource type="Resource" uid="uid://wrf2m3fnlteh" path="res://trenchbroom/fgd/point/spawn_point.tres" id="2_hicl2"]
+[ext_resource type="Resource" uid="uid://cl28mqe77w1s3" path="res://trenchbroom/fgd/point/directional_light.tres" id="3_yltam"]
+[ext_resource type="Resource" uid="uid://bmd25qtaickig" path="res://trenchbroom/fgd/point/omni_light.tres" id="4_jwgdm"]
+[ext_resource type="Resource" uid="uid://cvpdrg0b24n4r" path="res://trenchbroom/fgd/point/tree.tres" id="5_jwveq"]
+[ext_resource type="Resource" uid="uid://ci73ewddwv06r" path="res://trenchbroom/fgd/point/flower_field.tres" id="6_s6lnx"]
+[ext_resource type="Resource" uid="uid://cgfjyxn56ayky" path="res://trenchbroom/fgd/point/end_area.tres" id="7_114kv"]
+
+[resource]
+script = ExtResource("1_4f5ef")
+base_fgd_files = Array[Resource]([ExtResource("1_od0i7")])
+entity_definitions = Array[Resource]([ExtResource("2_hicl2"), ExtResource("3_yltam"), ExtResource("4_jwgdm"), ExtResource("5_jwveq"), ExtResource("6_s6lnx"), ExtResource("7_114kv")])
+metadata/_custom_type_script = "uid://drlmgulwbjwqu"

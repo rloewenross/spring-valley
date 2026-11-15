@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://t6jy065fb08f"]
+
+[ext_resource type="Script" uid="uid://c8lj7uv72py21" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cb6omnnedqj2q" path="res://hud_3d_scene.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dodyigawqwtgm" path="res://hud_2d_scene.tscn" id="3_h2yge"]
+[ext_resource type="AudioStream" uid="uid://cc2wltktjgna0" path="res://music/main_ambient.ogg" id="4_1bvp3"]
+
+[sub_resource type="World3D" id="World3D_dh6r3"]
+
+[node name="Main" type="Node" unique_id=860342425]
+script = ExtResource("1_ig7tw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=467429369]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HUD3D" type="SubViewport" parent="SubViewportContainer" unique_id=905723189]
+own_world_3d = true
+world_3d = SubResource("World3D_dh6r3")
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="HUD3DScene" parent="SubViewportContainer/HUD3D" unique_id=217148497 instance=ExtResource("2_0xm2m")]
+
+[node name="HUD2D" type="SubViewport" parent="SubViewportContainer" unique_id=2001715611]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="HUD2DScene" parent="SubViewportContainer/HUD2D" unique_id=1552705560 instance=ExtResource("3_h2yge")]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=354918735]
+stream = ExtResource("4_1bvp3")

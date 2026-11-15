@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cb6omnnedqj2q"]
+
+[ext_resource type="PackedScene" uid="uid://cym7bdpomxs8e" path="res://spring.tscn" id="1_eta8c"]
+[ext_resource type="Script" uid="uid://bxuxdhgcdep3k" path="res://hud_3d_scene.gd" id="1_pylbh"]
+
+[node name="HUD3DScene" type="Node3D" unique_id=217148497]
+script = ExtResource("1_pylbh")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1694847687]
+
+[node name="Spring" parent="." unique_id=1796420593 instance=ExtResource("1_eta8c")]
+transform = Transform3D(1, 0, 0, 0, 0.97245836, 0.23307666, 0, -0.23307666, 0.97245836, 0.6309197, -0.5536325, -0.68993616)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=898782493]
+transform = Transform3D(0.907215, 0, -0.42066732, 0, 1, 0, 0.42066732, 0, 0.907215, 0, 0, 0)

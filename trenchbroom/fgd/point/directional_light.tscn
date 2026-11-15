@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c3yb5f7ik3bhh"]
+
+[node name="DirectionalLight" type="DirectionalLight3D" unique_id=810857847]
+shadow_enabled = true
+shadow_opacity = 0.26
+shadow_blur = 1.495

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bqru6ily8rku6"]
+
+[ext_resource type="Script" uid="uid://do5aq3hbarivl" path="res://fake_player.gd" id="1_4albk"]
+[ext_resource type="AudioStream" uid="uid://c23pxkudaakqi" path="res://sfx/falling_wind.mp3" id="2_blcj4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dh6r3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dh6r3"]
+
+[node name="FakePlayer" type="CharacterBody3D" unique_id=1296686038]
+script = ExtResource("1_4albk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1237440119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_dh6r3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=608744421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_dh6r3")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=499930187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.545, 0)
+
+[node name="FallingWind" type="AudioStreamPlayer" parent="." unique_id=579586160]
+stream = ExtResource("2_blcj4")
+pitch_scale = 1.74
+bus = &"sfx"
+parameters/looping = true

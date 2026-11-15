@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dodyigawqwtgm"]
+
+[ext_resource type="Script" uid="uid://ds80qccenuyta" path="res://hud_2d_scene.gd" id="1_a01n1"]
+[ext_resource type="Texture2D" uid="uid://3nio6s3sqoru" path="res://crosshair.png" id="1_oi6dk"]
+[ext_resource type="Shader" uid="uid://dg0g1ce2ixlkh" path="res://vignette.gdshader" id="2_k0evx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a01n1"]
+shader = ExtResource("2_k0evx")
+shader_parameter/alpha = 1.0
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dh6r3"]
+font_size = 60
+outline_size = 2
+shadow_size = 0
+
+[node name="HUD2DScene" type="Node2D" unique_id=1552705560]
+script = ExtResource("1_a01n1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2021884608]
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=893494135]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_oi6dk")
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=2005443242]
+visible = false
+material = SubResource("ShaderMaterial_a01n1")
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(1, 1, 1, 0)
+
+[node name="EndingBackground" type="ColorRect" parent="." unique_id=1680116340]
+visible = false
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
+
+[node name="EndingText" type="Label" parent="." unique_id=743965404]
+visible = false
+offset_left = -151.0
+offset_top = -44.0
+offset_right = 150.0
+offset_bottom = 39.0
+text = "Thank you"
+label_settings = SubResource("LabelSettings_dh6r3")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ci44iq3ym00ct"]
+
+[ext_resource type="Script" uid="uid://cjcw0dohoe2dv" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://dkwtfjsfrtvbt" path="res://addons/player_character/player_camera.gd" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://cken3lbe1cvpg" path="res://sfx/spring_boing.wav" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://7doo02n2qv5a" path="res://sfx/hit_ground.wav" id="4_hqtel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cmwfe"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dh6r3"]
+
+[node name="Player" type="CharacterBody3D" unique_id=2058900463 node_paths=PackedStringArray("camera")]
+floor_max_angle = 0.5358161
+script = ExtResource("1_i3pqv")
+use_spring_delay_amount = 0.7
+spring_bounce_amount = 6.0
+speed = 65.0
+camera = NodePath("PlayerCamera")
+metadata/_custom_type_script = "uid://dypvy5ekunwk0"
+
+[node name="PlayerCamera" type="Camera3D" parent="." unique_id=1987198555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.545099, 0)
+script = ExtResource("2_i3pqv")
+metadata/_custom_type_script = "uid://dkwtfjsfrtvbt"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=434855190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_cmwfe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1580983806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_dh6r3")
+
+[node name="SpringBoing" type="AudioStreamPlayer" parent="." unique_id=148653641]
+stream = ExtResource("3_i3pqv")
+volume_db = -4.86
+bus = &"sfx"
+
+[node name="HitGround" type="AudioStreamPlayer" parent="." unique_id=943454133]
+stream = ExtResource("4_hqtel")
+bus = &"sfx"
+
+[connection signal="land_on_ground" from="." to="." method="_on_land_on_ground"]

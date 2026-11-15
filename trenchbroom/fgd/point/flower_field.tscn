@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cvw82lqixo07h"]
+
+[ext_resource type="PackedScene" uid="uid://c04an2npmndm0" path="res://flower.glb" id="1_al031"]
+
+[node name="FlowerField" type="Node3D" unique_id=1357594558]
+
+[node name="flower1" parent="." unique_id=989071712 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0687947, -0.11024654, 0)
+
+[node name="flower2" parent="." unique_id=1753222737 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49999022, -0.11024654, 0.6470817)
+
+[node name="flower3" parent="." unique_id=1361532898 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5816101, -0.11024654, -0.72893673)
+
+[node name="flower4" parent="." unique_id=2056918050 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11024654, -1.121951)
+
+[node name="flower5" parent="." unique_id=674603174 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6135341, -0.11024654, -0.846411)
+
+[node name="flower6" parent="." unique_id=1306664420 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70769584, -0.11024654, 0.3834188)
+
+[node name="flower7" parent="." unique_id=2025766077 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11024654, 0.683782)
+
+[node name="flower8" parent="." unique_id=1392678268 instance=ExtResource("1_al031")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11024654, -0.058373988)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" format=3 uid="uid://wrf2m3fnlteh"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_lr84g"]
+[ext_resource type="PackedScene" uid="uid://c0tbuaanfli4n" path="res://trenchbroom/fgd/point/spawn_point.tscn" id="2_b5s6w"]
+[ext_resource type="Script" uid="uid://cxsqwtsqd8w33" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="2_p03ho"]
+
+[resource]
+script = ExtResource("2_p03ho")
+scene_file = ExtResource("2_b5s6w")
+classname = "spawnpoint"
+description = "Where the player will start on the level"
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

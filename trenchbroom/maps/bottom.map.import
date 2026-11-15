@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://mju8cv5jmti8"
+path="res://.godot/imported/bottom.map-1d7a4300604bc0d593790e66d6a38ee6.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/bottom.map"
+dest_files=["res://.godot/imported/bottom.map-1d7a4300604bc0d593790e66d6a38ee6.tres"]
+
+[params]
+

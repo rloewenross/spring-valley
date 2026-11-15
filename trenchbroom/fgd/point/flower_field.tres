@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDModelPointClass" format=3 uid="uid://ci73ewddwv06r"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_ui3c3"]
+[ext_resource type="PackedScene" uid="uid://cvw82lqixo07h" path="res://trenchbroom/fgd/point/flower_field.tscn" id="2_nbucj"]
+[ext_resource type="Script" uid="uid://ldfqjtq0br35" path="res://addons/func_godot/src/fgd/func_godot_fgd_model_point_class.gd" id="2_ocgps"]
+
+[resource]
+script = ExtResource("2_ocgps")
+target_map_editor = 1
+models_sub_folder = "trenchbroom/models"
+scene_file = ExtResource("2_nbucj")
+classname = "flowerfield"
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1),
+"model": "{\"path\": \"trenchbroom/models/flowerfield.glb\", \"scale\": 32.0 }",
+"size": AABB(-8, -8, -8, 8, 8, 8)
+})
+metadata/_custom_type_script = "uid://ldfqjtq0br35"

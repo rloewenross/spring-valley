@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cym7bdpomxs8e"]
+
+[ext_resource type="Script" uid="uid://dld5q7cpdgxbe" path="res://spring.gd" id="1_boyml"]
+[ext_resource type="PackedScene" uid="uid://wfe7qlgl2v1i" path="res://spring.glb" id="1_ka4py"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hqtel"]
+radius = 0.22467282
+
+[node name="Spring" type="CharacterBody3D" unique_id=1796420593]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_boyml")
+
+[node name="spring" parent="." unique_id=2052005797 instance=ExtResource("1_ka4py")]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0.002556309, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=213439317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15888083, 0)
+shape = SubResource("SphereShape3D_hqtel")
